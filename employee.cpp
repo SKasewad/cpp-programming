@@ -1,34 +1,38 @@
 #include <iostream>
 using namespace std;
 
-class Employee {
-int employeeId;
-string name;
-float salary;
+class Employee
+{
+    int empId;
+    string name;
+    float salary;
 
 public:
-void acceptDetails() {
-cout << "Enter Employee ID: ";
-cin >> employeeId;
+    void accept()
+    {
+        cout << "Enter Employee ID: ";
+        cin >> empId;
 
-cout << " Enter name: ";
-cin >> name;
+        cout << "Enter Name: ";
+        cin >> name;
 
-cout << "Enter salary:" ;
-cin >> salary;
+        cout << "Enter Salary: ";
+        cin >> salary;
+    }
 
-}
-void displayDetails() {
-cout << "\nEmployee Details" << endl;
-cout << "Employee ID: " << employeeId << endl;
-cout << "Name: " << name << endl;
-cout << "Salary: " << salary << endl;
-}
+    void display()
+    {
+        cout << "\nEmployee Details\n";
+        cout << "ID: " << empId << endl;
+        cout << "Name: " << name << endl;
+        cout << "Salary: " << salary << endl;
+    }
 };
- int main() {
- Employee emp;
- 
- emp.acceptDetails();
- emp.displayDetails();
- return 0;
- }
+
+int main()
+{
+    Employee e;
+    e.accept();
+    e.display();
+    return 0;
+}
